@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جولدن بايب - طلب مواسير أونلاين</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .hero { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1581091012184-6e30f08302e0'); background-size: cover; background-position: center; }
+    .category-card { perspective: 1000px; transition: transform 0.6s, box-shadow 0.3s; }
+    .category-card:hover { transform: rotateY(10deg) scale(1.05); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+    .product-card { transition: transform 0.3s; }
+    .product-card:hover { transform: scale(1.05); }
+    .parallax { background-attachment: fixed; background: linear-gradient(to bottom, #1e3a8a, #3b82f6); }
+    .about-section { background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1597071051468-0e4132081115'); background-size: cover; background-position: center; }
+    .footer { background: linear-gradient(to right, #1e3a8a, #3b82f6); }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">جولدن بايب</h1>
+      <nav>
+        <a href="#categories" class="mx-2">الأقسام</a>
+        <a href="#cart" class="mx-2">عربة التسوق</a>
+        <a href="#about" class="mx-2">من نحن</a>
+        <a href="#contact" class="mx-2">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero h-96 flex items-center justify-center text-white">
+    <div class="text-center">
+      <h2 class="text-4xl font-bold mb-4">اطلب مواسيرك بسهولة أونلاين</h2>
+      <a href="#categories" class="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600">تصفح الأقسام</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-8 parallax">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center text-white">الأقسام</h2>
+      <div id="categoryList" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-8 hidden">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">المنتجات</h2>
+      <div class="flex gap-4 mb-6">
+        <input id="diameterFilter" type="number" placeholder="القطر (مم)" class="p-2 border rounded">
+      </div>
+      <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="py-8 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">عربة التسوق</h2>
+      <div id="cartItems" class="space-y-4"></div>
+      <button id="checkoutBtn" class="mt-4 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">إتمام الطلب</button>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <section id="orderForm" class="py-8 hidden">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">نموذج الطلب</h2>
+      <form id="orderFormData" class="space-y-4 max-w-lg mx-auto">
+        <input type="text" id="name" placeholder="الاسم" class="w-full p-2 border rounded" required>
+        <input type="tel" id="phone" placeholder="رقم الهاتف" class="w-full p-2 border rounded" required>
+        <input type="text" id="address" placeholder="العنوان" class="w-full p-2 border rounded" required>
+        <button type="button" id="getLocation" class="bg-blue-600 text-white py-2 px-4 rounded">مشاركة الموقع</button>
+        <div id="location" class="text-gray-600"></div>
+        <select id="paymentMethod" class="w-full p-2 border rounded" required>
+          <option value="">اختر طريقة الدفع</option>
+          <option value="cash">الدفع عند الاستلام</option>
+          <option value="vodafone">فودافون كاش</option>
+          <option value="instapay">إنستاباي</option>
+        </select>
+        <div id="paymentDetails" class="hidden">
+          <p class="font-semibold">تفاصيل الدفع:</p>
+          <p>فودافون كاش: 01285106499</p>
+          <p>إنستاباي: m.hesham@goldenpipeeg.com</p>
+          <input type="file" id="paymentProof" accept="image/*" class="w-full p-2 border rounded">
+        </div>
+        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">إرسال الطلب</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-8 about-section text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">من نحن</h2>
+      <div class="max-w-3xl mx-auto text-lg leading-relaxed">
+        <p>مصنع جولدن بايب مصنع متخصص في صناعة المواسير البلاستيك بأشكال وأنواع مختلفة. تم تأسيس مصنع جولدن بايب عن طريق المهندس خالد جادو وذلك بمنطقة البراجيل على مساحة 8000 متر مربع. ومنذ تأسيس المصنع والهدف الرئيس هو تقديم أشكال وأنواع مختلفة من المواسير البلاستيك ذات جودة عالية طبقًا للمواصفات القياسية المصرية والتي مكنت مصنع جولدن بايب من احتلال مكانة مميزة ضمن المصانع العاملة في مجال صناعة المواسير البلاستيك في السوق المصري.</p>
+        <p class="mt-4">يحقق مصنع جولدن بايب نموًا في المبيعات السنوية بنسب تزيد عن 40% سنويًا مما ساهم في مشاركة كبار المصنعين في الحصص السوقية المتاحة بالسوق المصري. وإيمانًا بأن التطوير المستمر هو أحد أهم عناصر النجاح لأي منظمة، فقد قام مصنع جولدن بايب بإضافة خط إنتاج جديد لتلبية احتياجات السوق المحلي بداية من أقطار 315 مم إلى 630 مم، وبذلك تزداد الطاقة الإنتاجية للمصنع لتصل إلى 800 طن شهريًا.</p>
+        <h3 class="text-xl font-bold mt-6">المهمة:</h3>
+        <p>إمداد السوق المصري بمنتجات البي في سي التي ترضي وتلبي احتياجات المتعاملين معنا بأعلى معايير الجودة والاستثمار المخطط في العنصر البشري لضمان تحقيق أهداف الشركة المستقبلية.</p>
+        <h3 class="text-xl font-bold mt-6">الرؤية:</h3>
+        <p>أن نكون من الشركات الرائدة في صناعة المواسير البلاستيك بنهاية عام 2025.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">جولدن بايب</h3>
+          <p>مصنع متخصص في صناعة المواسير البلاستيك ذات الجودة العالية.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+          <ul>
+            <li><a href="#categories" class="hover:underline">الأقسام</a></li>
+            <li><a href="#cart" class="hover:underline">عربة التسوق</a></li>
+            <li><a href="#about" class="hover:underline">من نحن</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+          <p><i class="fas fa-phone mr-2"></i>01285106499</p>
+          <p><i class="fas fa-envelope mr-2"></i>m.hesham@goldenpipeeg.com</p>
+          <p><i class="fab fa-whatsapp mr-2"></i><a href="https://wa.me/01285106499" class="hover:underline">واتساب</a></p>
+          <p><i class="fas fa-map-marker-alt mr-2"></i>البراجيل، الجيزة، مصر</p>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <p>&copy; 2025 جولدن بايب. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
