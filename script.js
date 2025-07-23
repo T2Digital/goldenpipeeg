@@ -195,7 +195,7 @@ document.getElementById("orderFormData").addEventListener("submit", async (e) =>
 
   // إرسال إلى واتساب
   const whatsappMessage = encodeURIComponent(orderDetails);
-  const whatsappNumber = "+201030956097";
+  const whatsappNumber = "201030956097";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
   window.open(whatsappUrl, "_blank");
   console.log("تم إرسال الطلب إلى واتساب");
