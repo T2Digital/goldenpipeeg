@@ -7,29 +7,29 @@ const categories = [
 // بيانات المنتجات
 const products = [
   // قسم الوصلات
-  { id: 1, name: "وصلات لزوم الآبار قلوظة من جانب واحد", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_PVC_fittings.jpg" },
-  { id: 2, name: "أكواع ذات رأس بجوان", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_elbow_fitting.jpg" },
-  { id: 3, name: "مشتركات لحام مدعمة بالفيبر جلاس", category: "Fittings", sizes: [{ diameter: 63 }, { diameter: 90 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/fittings.jpg" },
-  { id: 4, name: "جلبة مرملة", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_coupling.jpg" },
-  { id: 5, name: "أكواع لزوم شركات الغاز", category: "Fittings", sizes: [{ diameter: 32 }, { diameter: 63 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_gas_fittings.jpg" },
-  { id: 6, name: "أكواع ضغط ذات رأس وذيل", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 90 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/pressure_fittings.jpg" },
-  { id: 7, name: "مساليب لصق", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_tee_fitting.jpg" },
-  { id: 8, name: "بردات بالفلانشة ذات رأس جوان", category: "Fittings", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_flange_fitting.jpg" },
+  { id: 1, name: "وصلات لزوم الآبار قلوظة من جانب واحد", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_PVC_fittings.jpg", alt: "وصلات PVC للآبار" },
+  { id: 2, name: "أكواع ذات رأس بجوان", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_elbow_fitting.jpg", alt: "أكواع PVC بجوان" },
+  { id: 3, name: "مشتركات لحام مدعمة بالفيبر جلاس", category: "Fittings", sizes: [{ diameter: 63 }, { diameter: 90 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/fittings.jpg", alt: "مشتركات فيبر جلاس" },
+  { id: 4, name: "جلبة مرملة", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_coupling.jpg", alt: "جلبة PVC مرملة" },
+  { id: 5, name: "أكواع لزوم شركات الغاز", category: "Fittings", sizes: [{ diameter: 32 }, { diameter: 63 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_gas_fittings.jpg", alt: "أكواع للغاز" },
+  { id: 6, name: "أكواع ضغط ذات رأس وذيل", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 90 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/pressure_fittings.jpg", alt: "أكواع ضغط PVC" },
+  { id: 7, name: "مساليب لصق", category: "Fittings", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_tee_fitting.jpg", alt: "مساليب لصق PVC" },
+  { id: 8, name: "بردات بالفلانشة ذات رأس جوان", category: "Fittings", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_flange_fitting.jpg", alt: "بردات فلانشة PVC" },
   // قسم المواسير
-  { id: 9, name: "مواسير لزوم مياه الشرب والصرف الصحي", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_PVC_pipe.jpg" },
-  { id: 10, name: "مواسير سوداء قابلة للقلوظة", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_black_pipe.jpg" },
-  { id: 11, name: "مواسير بيضاء بخط أزرق", category: "Pipes", sizes: [{ diameter: 20 }, { diameter: 25 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/PPR_pipe.jpg" },
-  { id: 12, name: "مواسير سوداء للصرف", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_sewer_pipe.jpg" },
-  { id: 13, name: "مواسير ذات رأس جوان هرمي", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_gasket_pipe.jpg" },
-  { id: 14, name: "مواسير بيضاء بدون خط", category: "Pipes", sizes: [{ diameter: 20 }, { diameter: 25 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/white_pipe.jpg" },
-  { id: 15, name: "مواسير ذات ألوان مختلفة للتصدير", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_colored_pipe.jpg" },
-  { id: 16, name: "مواسير لزوم كابلات التليفونات والكهرباء", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 90 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_cable_pipe.jpg" },
-  { id: 17, name: "مواسير بيضاء برأس جوان وذيل", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_gasket_tail_pipe.jpg" },
-  { id: 18, name: "مواسير بيضاء برأس لصق وذيل", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/glue_tail_pipe.jpg" },
-  { id: 19, name: "مواسير رمادي ذات رأس لصق", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_grey_pipe.jpg" },
-  { id: 20, name: "مواسير آبار بسن", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_well_pipe.jpg" },
-  { id: 21, name: "مواسير آبار ذات جلبة", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_well_coupling_pipe.jpg" },
-  { id: 22, name: "مواسير آبار مخرمة", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_perforated_pipe.jpg" }
+  { id: 9, name: "مواسير لزوم مياه الشرب والصرف الصحي", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_PVC_pipe.jpg", alt: "مواسير مياه وصرف PVC" },
+  { id: 10, name: "مواسير سوداء قابلة للقلوظة", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_black_pipe.jpg", alt: "مواسير سوداء PVC" },
+  { id: 11, name: "مواسير بيضاء بخط أزرق", category: "Pipes", sizes: [{ diameter: 20 }, { diameter: 25 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/PPR_pipe.jpg", alt: "مواسير PPR بيضاء" },
+  { id: 12, name: "مواسير سوداء للصرف", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_sewer_pipe.jpg", alt: "مواسير صرف سوداء" },
+  { id: 13, name: "مواسير ذات رأس جوان هرمي", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_gasket_pipe.jpg", alt: "مواسير PVC بجوان هرمي" },
+  { id: 14, name: "مواسير بيضاء بدون خط", category: "Pipes", sizes: [{ diameter: 20 }, { diameter: 25 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/white_pipe.jpg", alt: "مواسير PVC بيضاء" },
+  { id: 15, name: "مواسير ذات ألوان مختلفة للتصدير", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_colored_pipe.jpg", alt: "مواسير ملونة للتصدير" },
+  { id: 16, name: "مواسير لزوم كابلات التليفونات والكهرباء", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 90 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_cable_pipe.jpg", alt: "مواسير كابلات PVC" },
+  { id: 17, name: "مواسير بيضاء برأس جوان وذيل", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_gasket_tail_pipe.jpg", alt: "مواسير PVC بجوان وذيل" },
+  { id: 18, name: "مواسير بيضاء برأس لصق وذيل", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 75 }], image: "https://www.fusionaus.com/wp-content/uploads/2018/10/glue_tail_pipe.jpg", alt: "مواسير PVC بلصق وذيل" },
+  { id: 19, name: "مواسير رمادي ذات رأس لصق", category: "Pipes", sizes: [{ diameter: 50 }, { diameter: 110 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_grey_pipe.jpg", alt: "مواسير رمادية PVC" },
+  { id: 20, name: "مواسير آبار بسن", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_well_pipe.jpg", alt: "مواسير آبار بسن" },
+  { id: 21, name: "مواسير آبار ذات جلبة", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_well_coupling_pipe.jpg", alt: "مواسير آبار بجلبة" },
+  { id: 22, name: "مواسير آبار مخرمة", category: "Pipes", sizes: [{ diameter: 110 }, { diameter: 160 }], image: "https://www.pipelife.com/fileadmin/user_upload/images/products/Pipelife_perforated_pipe.jpg", alt: "مواسير آبار مخرمة" }
 ];
 
 let cart = [];
@@ -85,7 +85,7 @@ function displayProducts() {
     .forEach((product) => {
       const card = `
         <div class="product-card bg-white shadow-lg rounded-lg p-4">
-          <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-md" onerror="this.src='https://via.placeholder.com/150'">
+          <img src="${product.image}" alt="${product.alt}" class="w-full h-48 object-cover rounded-md" onerror="this.src='https://via.placeholder.com/150'">
           <h3 class="text-xl font-bold mt-2">${product.name}</h3>
           <select id="size-${product.id}" class="mt-2 p-2 border rounded w-full">
             ${product.sizes.map(size => `<option value="${size.diameter}">${size.diameter} مم</option>`).join("")}
@@ -147,13 +147,14 @@ document.getElementById("checkoutBtn").addEventListener("click", () => {
 // مرشح القطر
 document.getElementById("diameterFilter").addEventListener("input", displayProducts);
 
-// مشاركة الموقع
+// مشاركة رابط الموقع
 document.getElementById("getLocation").addEventListener("click", () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       const { latitude, longitude } = position.coords;
-      document.getElementById("location").innerText = `الموقع: ${latitude}, ${longitude}`;
-      console.log("تم مشاركة الموقع:", latitude, longitude);
+      const mapsUrl = `https://maps.google.com/?q=${latitude},${longitude}`;
+      document.getElementById("location").innerHTML = `الموقع: <a href="${mapsUrl}" target="_blank">${mapsUrl}</a>`;
+      console.log("تم مشاركة رابط الموقع:", mapsUrl);
     }, (error) => {
       console.error("خطأ في مشاركة الموقع:", error);
       alert("فشل في مشاركة الموقع");
@@ -171,63 +172,4 @@ document.getElementById("paymentMethod").addEventListener("change", (e) => {
   } else {
     paymentDetails.classList.add("hidden");
   }
-});
-
-// إرسال الطلب
-document.getElementById("orderFormData").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const address = document.getElementById("address").value;
-  const location = document.getElementById("location").innerText;
-  const paymentMethod = document.getElementById("paymentMethod").value;
-  const paymentProof = document.getElementById("paymentProof").files[0];
-
-  // تجميع تفاصيل الطلب
-  let orderDetails = `طلب جديد من ${name}\nرقم الهاتف: ${phone}\nالعنوان: ${address}\nالموقع: ${location}\nطريقة الدفع: ${paymentMethod}\n`;
-  if (paymentProof) {
-    orderDetails += `إثبات الدفع: سيتم إرسال الرابط بعد الرفع\n`;
-  }
-  orderDetails += "المنتجات:\n";
-  cart.forEach((item) => {
-    orderDetails += `- ${item.product.name} (القطر: ${item.size} مم، العدد: ${item.quantity})\n`;
-  });
-
-  // إرسال إلى واتساب
-  const whatsappMessage = encodeURIComponent(orderDetails);
-  const whatsappNumber = "201030956097";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-  window.open(whatsappUrl, "_blank");
-  console.log("تم إرسال الطلب إلى واتساب");
-
-  // إرسال إلى جوجل شيت
-  const formData = new FormData();
-  formData.append("name", name);
-  formData.append("phone", phone);
-  formData.append("address", address);
-  formData.append("location", location);
-  formData.append("paymentMethod", paymentMethod);
-  formData.append("orderDetails", JSON.stringify(cart));
-
-  try {
-    await fetch("YOUR_GOOGLE_SHEET_API", {
-      method: "POST",
-      body: formData,
-    });
-    console.log("تم إرسال البيانات إلى جوجل شيت");
-  } catch (error) {
-    console.error("خطأ في إرسال البيانات إلى جوجل شيت:", error);
-  }
-
-  alert("تم إرسال الطلب بنجاح!");
-  document.getElementById("orderFormData").reset();
-  cart = [];
-  displayCart();
-  document.getElementById("orderForm").classList.add("hidden");
-});
-
-// تحميل الأقسام عند بدء الصفحة
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("تحميل الصفحة...");
-  displayCategories();
 });
